@@ -72,3 +72,7 @@ Write a program which takes user input and search all the data present in the gi
              • The Input is dyanmic means either one or two or three can be given as a search key.
              • Output: -We will get all the relevant information of that person whose name, ps no and email id is given.
              • source: -All the relevant data will get copied in master sheet created by the user choice.
+
+# SWOT Analysis
+
+![abhi](https://user-images.githubusercontent.com/78892310/111924442-9b644a00-8aca-11eb-9cc2-6d9053a9e4db.PNG)
