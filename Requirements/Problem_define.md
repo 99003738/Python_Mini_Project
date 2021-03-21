@@ -48,3 +48,27 @@ Write a program which takes user input and search all the data present in the gi
                vii.	  Row appended and column appended choice depend upon the sheet header format weather the workbook containing
                         the same set of header or different header name.
 
+# 4W & 1H :
+
+### What:
+             • We are having multiple excel workbook stored in diffenrent location in our system, to which we need to extract all the worksheet in them.
+             • Every Work Book have different number of work sheet in them.
+             • Taking a input search key and finding out all the data across the work book.
+             • It is used for easy search of a particular cell or data of a person
+             • It provides information of every person details which is present inside the loaded work book.
+### When:
+             • Searching all the data of a given search key.
+             • To get the contact information.
+             • To get the required details of that person according to data formulated in the sheet.
+### Why:
+             • We are using to retrieve tha data of an individual candidate from the excel workbook of 5 sheets where all the relevant data of 40 candidates is present.
+             • We can easily access the details of that individual by giving some input such as name , ps no and email id.
+### Where:
+             • To check the information and bio of a person
+             • Very useful during emergency times like health issues
+             • We can also use it for knowing that person's bank details and other details related to his or her educational qualification.
+### How:
+             • Input:- We need to give maximum  3 inputs such as Name, Ps No and Email Id. 
+             • The Input is dyanmic means either one or two or three can be given as a search key.
+             • Output: -We will get all the relevant information of that person whose name, ps no and email id is given.
+             • source: -All the relevant data will get copied in master sheet created by the user choice.
