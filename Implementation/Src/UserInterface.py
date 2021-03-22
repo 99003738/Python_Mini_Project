@@ -21,7 +21,7 @@ outputPath = []
 '''
 Creating class with name UserInterface which is calling itself
 '''
-class UserInterface:
+class UserInterfaces:
 
     # def __init__(self, UserInterface):
     #     self.UserInterface  = UserInterface
@@ -108,15 +108,15 @@ class UserInterface:
         print("6. Exit ")
         choice = int(input("Waiting for your choice : "))
         if choice == 1:
-            UserInterface.textfilenameread(self)
+            UserInterfaces.textfilenameread(self)
         elif choice == 2:
-            UserInterface.textfilepathread(self)
+            UserInterfaces.textfilepathread(self)
         elif choice == 3:
-            UserInterface.terminalpathinput(self)
+            UserInterfaces.terminalpathinput(self)
         elif choice == 4:
-            UserInterface.manuentrypath(self)
+            UserInterfaces.manuentrypath(self)
         elif choice == 5:
-            UserInterface.manuentryname(self)
+            UserInterfaces.manuentryname(self)
         elif choice == 6:
             return
 

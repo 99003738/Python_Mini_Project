@@ -5,7 +5,7 @@ import openpyxl as xl
 '''
 importing UserInput.py file
 '''
-import UserInput
+import UserInterface
 '''
 Importing the datafilter.py file
 '''
@@ -20,7 +20,7 @@ Output : after data found in respective sheet , copying the data to master sheet
 """
 '''
 def writing_mastersheet():
-    pathMasterWorkbook = UserInput.outputPath[0]
+    pathMasterWorkbook = UserInterface.outputPath[0]
     masterbook = xl.load_workbook(pathMasterWorkbook)
     lstsheet = masterbook.sheetnames
     length = len(lstsheet)
@@ -31,10 +31,10 @@ def writing_mastersheet():
     choice = int(input("Enter Your choice : "))
     if choice == 1:
         currMassheet.delete_rows(2, currMassheet.max_row - 1)
-        masterbook.save(UserInput.outputPath[0])
+        masterbook.save(UserInterface.outputPath[0])
     elif choice == 2:
         ws1 = masterbook.create_sheet("Mysheet")
-        masterbook.save(UserInput.outputPath[0])
+        masterbook.save(UserInterface.outputPath[0])
 
 '''
 function name:: sending_data_master()
@@ -52,7 +52,7 @@ def sending_data_master(pathvariable, searchitem = []):
     lengthworkbook1 = len(workbooksheet)               # countin the sheets in the workbooksheet
 
     # taking path of master workbook to be printed .
-    pathMasterWorkbook = UserInput.outputPath[0]
+    pathMasterWorkbook = UserInterface.outputPath[0]
     masterbook = xl.load_workbook(pathMasterWorkbook)     # taking the sheet of master workbook and intialising
     no_of_sheet = len(masterbook.sheetnames)
     # workSheetMaster = masterbook.active
@@ -64,7 +64,7 @@ def sending_data_master(pathvariable, searchitem = []):
 
     mastermaxrow = currMassheet.max_row
     mastermaxcol = currMassheet.max_column
-    currMassheet.cell(row= mastermaxrow+1, column=1).value = 'pathvariable'
+    # currMassheet.cell(row= mastermaxrow+1, column=1).value = 'pathvariable'
 
 
     print(searchitem)
@@ -83,8 +83,8 @@ def sending_data_master(pathvariable, searchitem = []):
 
         rownum = mastermaxrow+2
         mastercol= 1
-        currMassheet.cell(row= rownum, column = mastercol).value = 'sheets'
-        rownum = rownum+1
+        # currMassheet.cell(row= rownum, column = mastercol).value = 'sheets'
+        # rownum = rownum+1
         for colnum in range(4, wbMaxColumn + 1):             # this loop wil print the header of the selected sheet
             currMassheet.cell(row=rownum, column=mastercol).value = sheets.cell(row=1, column=colnum).value
             mastercol = mastercol+1
@@ -115,13 +115,18 @@ def sending_data_master(pathvariable, searchitem = []):
 this function is starting position of the program to run and calling the 
 function as per finite state machine.
 '''
-UserInput.user_selection()                         # this will invoke the user selection
-UserInput.user_choice_selection()                  # this will invoke the user choice selection
-UserInput.outputResult_path()                      # asking for output result format
+obj1 = UserInterface.UserInterfaces()
+obj2 = UserInterface.InputOutput()
+
+obj1.user_selection()
+obj2.choice_selection()
+obj2.outputResult_path()
+
+                                                    # asking for output result format
 writing_mastersheet()                              # this will invoke the overwrite and new sheet creation section
-length0fpathlist = len(UserInput.pathList)         # counting the number of path entered by the user.
+length0fpathlist = len(UserInterface.pathList)         # counting the number of path entered by the user.
 for d in range(0, length0fpathlist):               # running the loop till the whole path get executed
-    path = UserInput.pathList[d]                   # loading the first path in the path variable.
+    path = UserInterface.pathList[d]                   # loading the first path in the path variable.
     check = DataFilter.validating_input(path)      # calling the data filter section for validating the data.
     if check == 1:                                      # if data validation is right then pass the path and input search key to the printing section of
-        sending_data_master(path, UserInput.inputList)
+        sending_data_master(path, UserInterface.inputList)

@@ -2,7 +2,7 @@
 '''
 Importing the UserInput.py file
 '''
-import UserInput
+import UserInterface
 '''
 Importing the openpyxl library.
 '''
@@ -21,13 +21,13 @@ def sheettraversing(sheet):
     maxcolumn = sheet.max_column
     # print(maxrows)
     # print(maxcolumn)
-    loi_list = len(UserInput.inputList)   # counting length of the inputList
+    loi_list = len(UserInterface.inputList)   # counting length of the inputList
    # for listdata in range(0, loi_list):  rem
     for i in range(2, maxrows+1):                                   # i is rows and j is column
         for j in range(1,4):
              data_at_cell1 = sheet.cell(row= i, column= j)
 
-             if str(UserInput.inputList[0]) == str(data_at_cell1.value):
+             if str(UserInterface.inputList[0]) == str(data_at_cell1.value):
                 data_at_cell1 = sheet.cell(row= i, column = 1)  # loading all the data of matched search key
                 data_at_cell2 = sheet.cell(row= i, column= 2)
                 data_at_cell3 = sheet.cell(row= i, column= 3)
@@ -40,7 +40,7 @@ def sheettraversing(sheet):
                 add =0
                 for check in range(0, 3):
                     for inner in range(0, loi_list):
-                        if v[check] == str(UserInput.inputList[inner]):
+                        if v[check] == str(UserInterface.inputList[inner]):
                             v[check] = 1
                             add = add + int(v[check])
                 if add == loi_list:
