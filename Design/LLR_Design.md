@@ -24,10 +24,13 @@
 
 ![Terminal_input](https://user-images.githubusercontent.com/78892310/111924790-301b7780-8acc-11eb-8351-11d59a5b4500.PNG)
 
+# Algorithm for Input validation function.
 
 ![ALgorithm_01](https://user-images.githubusercontent.com/78892310/111924786-2e51b400-8acc-11eb-953a-906c0a9200ad.PNG)
 
+# Algorithm for Input validation
 
+![Data_Filter (1)](https://user-images.githubusercontent.com/78892310/111925506-1fb8cc00-8acf-11eb-8469-3b2f22eed3b8.png)
 
 
 
