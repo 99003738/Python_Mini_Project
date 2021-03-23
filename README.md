@@ -1,5 +1,19 @@
 # Python_Mini_Project
 
+# How to Navigate through this project folder.
+
+## Folder name : Requirement
+ This folder contain the problem definiton and requirement table for High Level requirements and Low Level Requirements.
+ 
+ ## Folder name : Design
+ 
+ This folder contain the High Level Design and Low Level Design.
+ 
+ ## Folder name : Implementation
+ 
+ In this folder under src on file name with ### MasterWrite.py ### is available which need to be run for executing the project.
+
+
 # Step 01
  Enter your choice for path selection as shoen in below diagram.
  Currently three option are available as shown in the figure.
